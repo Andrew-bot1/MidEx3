@@ -9,11 +9,11 @@ namespace MidEx3
 {
     internal class Program
     {
-        
+        static double[] numbers = { };
         static void Main(string[] args)
         {
             bool exit = false;
-            double[] numbers = { };
+            
 
             while (!exit)
             {
@@ -66,13 +66,18 @@ namespace MidEx3
         }
         static void DisplaySum()
         {
-            
-            Console.WriteLine("The sum of all numbers is: " + numbers.sum());
+            double sum = 0;
+
+            foreach (double number in numbers)
+            {
+                sum += number;
+            }
+            Console.WriteLine("The sum of all numbers is: " + sum);
         }
         static void DisplayGreatestAndLowest()
         {
             Console.WriteLine("The greatest number is: " + numbers.Max());
-            Console.WriteLine("The lowest number is: " + numbers.Min);
+            Console.WriteLine("The lowest number is: " + numbers.Min());
         }
         static void DisplayReverse()
         {
