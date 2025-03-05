@@ -13,7 +13,15 @@ namespace MidEx3
         static void Main(string[] args)
         {
             bool exit = false;
-            
+
+            Console.WriteLine("How long is the array? ");
+            int arraySize = Convert.ToInt32(Console.ReadLine());
+            int[] numbers = new int[arraySize];
+            for (int i = 0; i < arraySize; i++)
+            {
+                Console.WriteLine("Enter a number for element "+i);
+                numbers[i] = Convert.ToInt32(Console.ReadLine());
+            }
 
             while (!exit)
             {
@@ -55,7 +63,7 @@ namespace MidEx3
         {
             Console.WriteLine("Enter a number to add: ");
             double number = Convert.ToDouble(Console.ReadLine());
-            numbers.Add(number);
+           // numbers.Add(number);
         }
         static void DisplayNumber()
         {
